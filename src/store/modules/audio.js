@@ -19,26 +19,28 @@ const audioInfo = {
     // 获取音乐是否播放
     getIsPlaying: state => state.playing,
     // 获取audio信息
-    getAudioInfo: state => state.audio
+    getAudioInfo: state => state.audio,
+    // 获取音乐全部信息
+    getMusicAllList: state => state.musicAllList
   },
   mutations: {
     // play设置
-    play (state) {
+    play(state) {
       state.playing = true
-      // state.audioelement.play()
+        // state.audioelement.play()
     },
     // 暂停设置
-    pause (state) {
+    pause(state) {
       state.playing = false
-      // state.audioelement.pause()
+        // state.audioelement.pause()
     },
-    togglePlay (state) {
+    togglePlay(state) {
       if (state.playing) {
         state.playing = false
-        // state.audioelement.pause()
+          // state.audioelement.pause()
       } else {
         state.playing = true
-        // state.audioelement.play()
+          // state.audioelement.play()
       }
     }
   }
